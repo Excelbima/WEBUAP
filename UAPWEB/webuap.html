@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<bo>
+    <table border="1">
+        <tr>
+            <th>Kode Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Produk A</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Produk B</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Produk C</td>
+            <td>20000</td>
+        </tr>
+    </table>
+    <br>
+<h2>Inputan User</h2>
+    <table border="1">
+        <tr>
+            <td><label>Kode</label></td>
+            <td><input type="text" name="kode" id="kode"></td>    
+        </tr>
+        <tr>
+            <td><label>Banyaknya Barang</label></td>
+            <td><input type="text" name="jumlah" id="jumlah"></td>        
+        </tr>
+        <tr>
+    </table border = "1">
+    <br>
+    <button type="submit" id="btnsubmit">submit</button>
+    <table border="1" id="hasilTable" style="display: none;">
+        <tr>
+            <th>Total Pembayaran</th>
+            <td id="totalPembayaran"></td>
+        </tr>
+        <tr>
+            <th>Uang Anda</th>
+            <td id="uangUser"></td>
+        </tr>
+        <tr>
+            <th>Kembalian</th>
+            <td id="kembalian"></td>
+        </tr>
+    </table>
+</body>
+<script>
+    document.getElementById("btnsubmit").addEventListener("click", function(){
+        var kode = document.getElementById("kode").value;
+        var jumlah = document.getElementById("jumlah").value;
+        document.getElementById("kembalian").innerHTML = "Rp. " + (parseInt(harga) * parseInt(jumlah));
+        document.getElementById("uangUser").innerHTML = "Rp. " + (parseInt(uang) - parseInt(kembalian));
+        document.getElementById("totalPembayaran").innerHTML = "Rp. " + (parseInt(harga) * parseInt(jumlah));
+        document.getElementById("fasilitasTable").style.display = "block";
+    })
+</script>
+</html>
+
+
+
